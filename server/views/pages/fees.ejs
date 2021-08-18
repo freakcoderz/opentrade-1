@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
     
-    <% include ../partials/head %>
+    <%- include ../partials/head %>
   <body>
 
-    <% include ../partials/header %>
+    <%- include ../partials/header %>
 
 
-    <div class="container pt-2">
+    <div class="container">
       <div class='row'>
-        <div class="col-md-12">
-            <div class="card w-100">
-              <div class="card-body">
-                <center><h2 class="card-title">ShorelineCrypto Fees</h2></center>
-                <h3>Trading Commission</h3>
-                <p class="card-text">Trading fees are paid only on buyer side.  buy fee: 0.2% / sell fee: 0% </p>
+        <div class="col-sm-12">
+            <div class="card">
+              <div class="text-center">
+               <h2>FreakExchange Fees</h2>
+			   <hr>
+                <h3>Trading Fee</h3>
+                All trades have a 0.2% fee.<br >
                 <hr>
-                <h3>Deposit Fees</h3>
-                <p class="card-text">Free for all cryptocurrencies.</p>
+                <h3>Deposit Fee</h3>
+                All cryptocurrencies have a 0.0% fee.<br>
                 <hr>
-                <h3>Withdraw Fees</h3>
-                <p class="card-text">ZERO withdraw fees at exchange.  Residual minimum balance minus miner fee can still be traded to DOGE or NENG. <a href="https://bitcointalk.org/index.php?topic=5121953.msg53521502#msg53521502">Details</a></p>
-                <hr>
-		<div class="container">
-                    <div class='row'>
-                        <div class='col-md-6'>
-                            <table class='table w-30'>
-                                <thead>
+                <h3>Withdraw Fee</h3>
+                The fee is appointed by the coin blockchain. To ensure the withdraw, we will freeze the minimum balance:<br ><br>
+              <center>
+		<div class="col-sm-10 table-responsive">
+                            <table id="checkdata" class="table table-striped table-bordered table-responsive">
+                                <thead class="bg bg-dark text-light text-center">
                                     <tr>
                                         <th></th>
                                         <th>Coin</th>
-                                        <th>Min. balance</th>
+                                        <th> Fee Withdraw </th>
+					<th> Min Deposit Confirmations </th>
+					<th> Info and Links</th>
+					<th> Status </th>
                                     </tr>
                                 </thead>
-                                <tbody id='id_fees'>
+                                <tbody id='id_fees' class="text-center bg-light">
                                 </tbody>
+				<tfoot class="bg bg-dark text-light text-center">
+                                     <tr>
+                                        <th></th>
+                                        <th>Coin</th>
+                                        <th> Fee Withdraw </th>
+					<th> Min Deposit Confirmations </th>
+					<th> Info and Links</th>
+					<th> Status </th>
+                                    </tr>
+                                  </tfoot>
                             </table>
-                        </div>
-                    </div>
-                </div>
+                  
+               </div>
+			    <center>
               </div>
             </div>
         </div>
@@ -46,8 +58,7 @@
 
     </div> <!-- /container -->
 
-
-    <% include ../partials/footer %>
+    <%- include ../partials/footer %>
     <script src='/js/fees.js'></script>
   </body>
 </html>
