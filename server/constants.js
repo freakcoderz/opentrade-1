@@ -99,7 +99,11 @@ exports.dbTables = [
           ['address', 'TEXT'],
           ['rpc_user', 'TEXT'],
           ['rpc_password', 'TEXT'],
-          ['info', 'TEXT']
+          ['info', 'TEXT'],
+		    ['explorer', 'TEXT'],
+		    ['twitter', 'TEXT'],
+		    ['telegram', 'TEXT'],
+		    ['discord', 'TEXT']
         ]
    },
    {
